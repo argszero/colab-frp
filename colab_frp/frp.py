@@ -23,11 +23,12 @@ def frp_connect(server_host,server_port,token,password):
 [common]
 server_addr = %s
 server_port = %s
+token = %s
 
 [ssh]
 type = tcp
 local_ip = 127.0.0.1
 local_port = 22
 remote_port = 6000
-        '''.strip()%(server_host,server_port))
+        '''.strip()%(server_host,server_port,token))
     os.system('./frp_0.35.1_linux_amd64/frpc -c ./frp_0.35.1_linux_amd64/frpc.ini')
