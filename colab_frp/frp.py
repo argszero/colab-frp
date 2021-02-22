@@ -18,6 +18,7 @@ def frp_connect(server_host,server_port,token,password):
     os.system("kill -9 $(ps aux | grep 'frpc' | awk '{print $2}')")
     os.system('wget https://github.com/fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_amd64.tar.gz')
     os.system('tar -zxvf frp_0.35.1_linux_amd64.tar.gz')
+    os.system('cat frp_0.35.1_linux_amd64/frpc.ini')
     with open('frp_0.35.1_linux_amd64/frpc.ini', 'w') as f:
         f.write('''
 [common]
