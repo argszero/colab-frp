@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="colab_frp",
-    version="0.0.5",
+    version="0.0.6",
     author="argszero",
     author_email="argszero@gmail.com",
     description="Google colab frp connector",

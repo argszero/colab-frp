@@ -1,6 +1,6 @@
 import os
 
-def frp_connect(server_host,server_port,token,password):
+def client(server_host,server_port,token,password):
     #ssh
     os.system("apt-get -qq update && apt-get -qq install -o=Dpkg::Use-Pty=0 openssh-server pwgen > /dev/null")
     print(server_host)
@@ -32,4 +32,4 @@ local_ip = 127.0.0.1
 local_port = 22
 remote_port = 6000
         '''.strip()%(server_host,server_port,token))
-    os.system('./frp_0.35.1_linux_amd64/frpc -c ./frp_0.35.1_linux_amd64/frpc.ini')
+    os.system('nohup ./frp_0.35.1_linux_amd64/frpc -c ./frp_0.35.1_linux_amd64/frpc.ini &')

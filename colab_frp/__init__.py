@@ -1,1 +1,1 @@
-from colab_frp.frp import frp_connect
+from colab_frp.frp import client 
